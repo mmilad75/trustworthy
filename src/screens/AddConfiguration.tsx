@@ -5,18 +5,14 @@ import {Header, Button, Card} from '../components';
 const AddConfiguration: React.FC = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Header />
-      </View>
+      <Header />
 
       <View style={styles.bodyContainer}>
         <Card />
       </View>
 
-      <View style={styles.footerContainer}>
-        <Button title="Review this item" />
-        <Button title="Add something else" type="white" />
-      </View>
+      <Button title="Review this item" />
+      <Button title="Add something else" type="white" />
     </View>
   );
 };
@@ -30,9 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
   },
-  headerContainer: {},
   bodyContainer: {flex: 1},
-  footerContainer: {},
 });
 
 export default AddConfiguration;
