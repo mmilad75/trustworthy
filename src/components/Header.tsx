@@ -1,5 +1,7 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {Image} from '.';
+import {colors} from '../helpers/colors';
 
 const Header: React.FC = () => {
   return (
@@ -7,7 +9,7 @@ const Header: React.FC = () => {
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={require('../assets/images/check.png')}
+          source={require('../assets/icons/check.png')}
         />
       </View>
     </View>
@@ -19,11 +21,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 10,
+    marginBottom: 15,
   },
   imageContainer: {
     height: 40,
     width: 40,
-    backgroundColor: '#006bfa',
+    backgroundColor: colors.blue,
     borderRadius: 10000,
     justifyContent: 'center',
     alignItems: 'center',
@@ -31,7 +34,7 @@ const styles = StyleSheet.create({
   image: {
     width: 20,
     height: 20,
-    tintColor: '#ffffff',
+    tintColor: colors.white,
   },
 });
 

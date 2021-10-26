@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import {Text} from '.';
+import {colors} from '../helpers/colors';
 
 interface Props extends TouchableOpacityProps {
   type?: 'white' | 'black';
@@ -44,22 +45,22 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   blackButtonContainer: {
-    backgroundColor: '#1d1d1d',
+    backgroundColor: colors.black,
   },
   whiteButtonContainer: {
-    backgroundColor: '#ffffff',
+    backgroundColor: colors.white,
     borderWidth: 2,
-    borderColor: '#e9ebed',
+    borderColor: colors.white200,
   },
   text: {
     fontSize: 18,
     fontWeight: '700',
   },
   whiteText: {
-    color: '#efefef',
+    color: colors.white100,
   },
   blackText: {
-    color: '#1d1d1d',
+    color: colors.black,
   },
 });
 export default Button;

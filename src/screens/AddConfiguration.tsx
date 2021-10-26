@@ -18,15 +18,12 @@ const AddConfiguration: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  safeAreaView: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
   container: {
     flex: 1,
-    padding: 10,
   },
-  bodyContainer: {flex: 1},
+  bodyContainer: {
+    flex: 1,
+  },
 });
 
 export default AddConfiguration;
