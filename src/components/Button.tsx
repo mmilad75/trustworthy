@@ -13,7 +13,7 @@ interface Props extends TouchableOpacityProps {
   title: string;
 }
 
-const Button: React.FC<Props> = ({title, type = 'black'}) => {
+const Button: React.FC<Props> = ({title, type = 'black', ...props}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -22,7 +22,8 @@ const Button: React.FC<Props> = ({title, type = 'black'}) => {
         type === 'black'
           ? styles.blackButtonContainer
           : styles.whiteButtonContainer,
-      ]}>
+      ]}
+      {...props}>
       <Text
         style={[
           styles.text,

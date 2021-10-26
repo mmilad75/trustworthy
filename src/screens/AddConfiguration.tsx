@@ -1,17 +1,31 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Header, Button, Card} from '../components';
+import ConfettiCannon from 'react-native-confetti-cannon';
 
 const AddConfiguration: React.FC = () => {
+  let confetti: ConfettiCannon | null;
+
+  const handleConfettiStart = () => {
+    confetti && confetti.start();
+  };
+
   return (
     <View style={styles.container}>
+      <ConfettiCannon
+        count={200}
+        origin={{x: -40, y: 0}}
+        autoStart={false}
+        ref={ref => (confetti = ref)}
+      />
+
       <Header />
 
       <View style={styles.bodyContainer}>
         <Card />
       </View>
 
-      <Button title="Review this item" />
+      <Button onPress={handleConfettiStart} title="Review this item" />
       <Button title="Add something else" type="white" />
     </View>
   );
