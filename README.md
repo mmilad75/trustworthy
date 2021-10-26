@@ -1,5 +1,5 @@
 # Description
-This is a simple app written in Typescript using React Native. It is created to demonestrate the authors skills to TrustWorthy team.
+This is a simple app written in Typescript using React Native. It is created to demonestrate the developers skills to TrustWorthy team.
 
 # How to run
 1. Clone the project by running `git clone git@github.com:mmilad75/trustworthy.git`.
