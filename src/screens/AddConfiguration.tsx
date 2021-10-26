@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Header, Button, Card} from '../components';
 import ConfettiCannon from 'react-native-confetti-cannon';
+import {MOCK_DATA} from '../helpers/mockData';
 
 const AddConfiguration: React.FC = () => {
   let confetti: ConfettiCannon | null;
@@ -22,7 +23,7 @@ const AddConfiguration: React.FC = () => {
       <Header />
 
       <View style={styles.bodyContainer}>
-        <Card />
+        <Card data={MOCK_DATA} />
       </View>
 
       <Button onPress={handleConfettiStart} title="Review this item" />

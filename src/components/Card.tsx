@@ -1,13 +1,21 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, ImageSourcePropType} from 'react-native';
 import {Text, Image} from '.';
 import {colors} from '../helpers/colors';
 
-const Card: React.FC = () => {
+interface Props {
+  data: {
+    title: string;
+    subtitle: string;
+    image: ImageSourcePropType;
+  };
+}
+
+const Card: React.FC<Props> = ({data}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Jackies life insurance</Text>
+        <Text style={styles.title}>{data.title}</Text>
         <View style={styles.iconContainer}>
           <Image
             source={require('../assets/icons/umbrella.png')}
@@ -17,11 +25,8 @@ const Card: React.FC = () => {
       </View>
 
       <View style={styles.contentContainer}>
-        <Image
-          style={styles.image}
-          source={require('../assets/images/alabama.png')}
-        />
-        <Text style={styles.subtitle}>Jackies life insurance statement</Text>
+        <Image style={styles.image} source={data.image} />
+        <Text style={styles.subtitle}>{data.subtitle}</Text>
       </View>
     </View>
   );
